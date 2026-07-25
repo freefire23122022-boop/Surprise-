@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For S🎀 ❤️</title>
+
+<style>
+body{
+margin:0;
+background:linear-gradient(135deg,#000428,#004e92);
+font-family:Arial,sans-serif;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.page{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+button{
+padding:15px 30px;
+font-size:20px;
+border:none;
+border-radius:30px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+}
+
+.hidden{
+display:none;
+}
+
+.heart{
+font-size:90px;
+animation:beat 1s infinite;
+}
+
+@keyframes beat{
+50%{
+transform:scale(1.2);
+}
+}
+
+#typing{
+font-size:28px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.letter{
+background:rgba(255,255,255,.12);
+padding:20px;
+border-radius:20px;
+max-width:500px;
+}
+
+#final{
+font-size:35px;
+color:#ffd700;
+margin-top:20px;
+}
+</style>
+
+</head>
+<body>
+
+<div id="start" class="page">
+<h1>✨ A Special Surprise ✨</h1>
+<p>Only For S🎀 ❤️</p>
+<button onclick="start()">Tap To Begin</button>
+</div>
+
+<div id="main" class="page hidden">
+
+<div id="typing"></div>
+
+<div class="heart">❤️</div>
+
+<div class="letter">
+<h2>💌 My Letter</h2>
+
+<p>
+You are one of the most special people in my life.<br><br>
+
+Thank you for every smile, every memory and every moment.<br><br>
+
+I hope this little surprise makes you smile today. ❤️
+</p>
+
+</div>
+
+<br>
+
+<button onclick="love()">Open My Heart ❤️</button>
+
+<div id="final"></div>
+
+</div>
+
+<script>
+
+function start(){
+
+document.getElementById("start").style.display="none";
+
+document.getElementById("main").classList.remove("hidden");
+
+let text="Hi S🎀, Welcome To Your Surprise ❤️";
+
+let i=0;
+
+let timer=setInterval(function(){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+if(i>=text.length){
+
+clearInterval(timer);
+
+}
+
+},80);
+
+}
+
+function love(){
+
+document.getElementById("final").innerHTML="❤️ I LOVE YOU S🎀 ❤️";
+
+}
+
+</script>
+
+</body>
+  </html>
